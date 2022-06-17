@@ -12,9 +12,10 @@ export const capitalizeString = (string) => string.split(' ').map((word) => `${w
  */
 export const fenceString = (string) => {
     return string
-    .split ('').map((letter, index) => {
-        return index !==1 ? letter.toUpperCase() : letter.toLocaleLowerCase();
-    }).join('')
+    .split ('')
+    .map((letter, index) => {
+    return index %2 === 1 ? letter.toUpperCase() : letter.toLowerCase();
+    }).join('');
 };
 /**
  * Должна быть function expression
